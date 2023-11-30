@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title>Calcul</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script type="text/javascript" src="index.js">
+			
+		</script>
+    </head>
+    <body>
+		<form id="monForm" method="POST">
+			<fieldset>
+				<legend>
+					A toi de jouer !
+				</legend>
+			  <input type="button" id="commencer" name="commencer" value="Commencer !" class="" onClick="Demarrer('monForm', 'exercice', 'commencer')"/>
+				<div id="exercice"></div>
+				<p id="mesboutons">
+					<input type="button" id="valider" name="valider" value="Valider"/>
+  <input type="button" id="correctionbutton" name="correctionbutton" value="Montrer/Cacher la correction" onClick="Hidee('monForm', 'correction', 'divcorrection')"/>
+				</p>
+			</fieldset>
+            <fieldset id="correction" class="hide">
+                
+                <div id="divcorrection"></div>
+				<legend>
+                    <h1>Correction</h1>
+                </legend>
+            </fieldset>
+		</form>		
+	</body>
+</html>
