@@ -9,11 +9,17 @@
 		</script>
 		<script type="text/javascript" src="TabVideAide2.js">
 		</script>
-		
+		<script type="text/javascript" src="test.js">
+		</script>
 		<script type="text/javascript" src="AllFunct.js">
 		</script>
+		<script>
+			function myFunction() {
+				alert('Petit conseil :\nMeilleur visionnage en rotation paysage.');
+			}
+		</script>
     </head>
-    <body>
+    <body onload="myFunction()">
 		<form id="monForm" method="post" action="index.html">
 			<fieldset id="aide" class="hide">
                 <div id="divaide"></div>
@@ -33,15 +39,42 @@
 				<div id="exercice"></div>
 				<p id="mesboutons">
 					<input type="text" id="reponse" name="reponse"/></br>
-					<input type="button" id="nextone" name="nextone" value="Suivant" onclick="reloadAndSupp('reponse')"/>
+					<input type="button" id="aidebutton1" name="aidebutton1" value="Aide" onclick="Hidee('monForm', 'aide', 'aidebutton1')"/>
 					<input type="button" id="valider" name="valider" value="Valider" onclick="VerifRep('monForm', 'triche', 'reponse')"/>
-  					<input type="button" id="aidebutton1" name="aidebutton1" value="Aide" onclick="Hidee('monForm', 'aide', 'aidebutton1')"/>
+					<input type="button" id="nextone" name="nextone" value="Suivant" onclick="reloadAndSupp('reponse')"/>
+				</br>
+				<p>
+					Règle de conversion :</br></br>
+					Pour convertir un nombre N d'une unité A en une unité B, il faut :
+					<ul>
+						<li>Compter le nombre de cases pour passer de la première unité à la deuxième</li>
+						<li>Repérer le sens de l'unité B par rapport à l'unité A (à droite ou à gauche de l'unité A)</li>
+						<li>Mettre autant de "0" avant ou après le 1 (respectivement à gauche ou à droite de l'unité A). Appelons ce nouveau nombre crée Q.</li>
+						<li>multiplier N par Q.</li>
+					</ul>
+					</br></br>
+					Exemple 1 : Si nous voulons convertir 3,5(N) ml(A) en mg(B), il nous faut :
+					<ul>
+						<li><b>3</b> cases pour passer de la case des ml(A) à la case des mg(B).</li>
+						<li>L'unité "mg"(B) se trouve à <b>droite</b> de l'unité "ml"(A).</li>
+						<li>Nous allons donc mettre à <b>droite</b> du "<b>1</b>" <b>trois</b> fois "0". Cela nous crée un nouveau nombre <b>1 000</b> (Q).</li>
+						<li>Nous multiplions : 3,5 (N) x 1 000 (Q) = 3 500.</li>
+					</ul>
+					3,5 ml est égal à 3 500 mg.
+					</br></br></br>
+					Exemple 2 : Si nous voulons convertir 3,5(N) ml(A) en dl(B), il nous faut :
+					<ul>
+						<li><b>2</b> cases pour passer de la case des ml(A) à la case des dl(B).</li>
+						<li>L'unité "dl"(B) se trouve à <b>gauche</b> de l'unité "ml"(A).</li>
+						<li>Nous allons donc mettre à <b>gauche</b> du "<b>1</b>" <b>deux</b> fois "0". Cela nous crée un nouveau nombre <b>001</b> (Q).</li>
+						<li>N'oublions pas la virgule après le premier Zéro : 0<b>,</b>01 !</li>
+						<li>Nous multiplions : 3,5 (N) x 0,01 (Q) = 0,035.</li>
+					</ul>
+					3,5 ml est égal à 0,035 dl.
+				</p>
 				</p>
 			</fieldset>
 			<input type="text" id="triche" class="hide"/>
 		</form>
-		<script type="text/javascript" src="test.js">
-			screen.lockOrientation('landscape');
-		</script>
 	</body>
 </html>
