@@ -413,12 +413,33 @@ function Demarrer(form, exo, bu) {
 }
 
 function VerifRep(form, idtriche, idrep) {
-    if (document.forms[form].elements[idrep].value == document.forms[form].elements[idtriche].getAttribute('name')) {
-        alert('reussi');
+    var shrinkindex = false;
+    var sareponse = document.forms[form].elements[idrep].value;
+    
+    for (let i = 0; i<sareponse.length; i++) {
+        if (sareponse[i] == ",") {
+            shrinkindex = i;
+        }
+    }
+
+    if (shrinkindex != false) {
+        Str1 = sareponse.substr(0, shrinkindex);
+        Str2 = sareponse.substr(shrinkindex+1);
+        newStr = Str1 + '.' + Str2;
+        sareponse = newStr;
+    }
+    
+    if (sareponse == document.forms[form].elements[idtriche].getAttribute('name')) {
+        alert('Réussi');
         NewConversion(form, 'exercice', 'commencer');
         document.getElementById('reponse').value = "";
     }
     else {
-        alert('échoué');
+        alert('Échoué');
     }
+}
+
+function reloadAndSupp(rep) {
+    document.getElementById(rep).value = "";
+    document.location.reload();
 }

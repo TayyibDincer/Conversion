@@ -33,12 +33,12 @@
 				<div id="exercice"></div>
 				<p id="mesboutons">
 					<input type="text" id="reponse" name="reponse"/></br>
+					<input type="button" id="nextone" name="nextone" value="Suivant" onclick="reloadAndSupp('reponse')"/>
 					<input type="button" id="valider" name="valider" value="Valider" onclick="VerifRep('monForm', 'triche', 'reponse')"/>
   					<input type="button" id="aidebutton1" name="aidebutton1" value="Montrer/Cacher l'aide" onclick="Hidee('monForm', 'aide', 'aidebutton1')"/>
-					<input type="button" id="nextone" name="nextone" value="Suivant" onclick="document.location.reload()"/>
 				</p>
 			</fieldset>
-			<input type="text" id="triche" name="" class="hide"/>
+			<input type="text" id="triche" class="hide"/>
 		</form>		
 	</body>
 </html>
