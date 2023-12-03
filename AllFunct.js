@@ -322,7 +322,7 @@ function uniteRandomCorrection(unite) {
     return [correction_unite, rand, correction_tab];
 }
 
-function NewConversion(form, exo, bu) {
+function NewConversion(exo) {
     var exoa = document.getElementById(exo);
     if (document.getElementById('exoprovisoire') != null) {
         document.getElementById('exoprovisoire').remove();
@@ -409,7 +409,7 @@ function Demarrer(form, exo, bu) {
     // Cacher le bouton "Commencer"
     document.forms[form].elements[bu].classList.add('hide');
     
-    NewConversion(form, exo, bu);
+    NewConversion(exo);
 }
 
 function VerifRep(form, idtriche, idrep) {
@@ -431,7 +431,7 @@ function VerifRep(form, idtriche, idrep) {
     
     if (sareponse == document.forms[form].elements[idtriche].getAttribute('name')) {
         alert('Réussi');
-        NewConversion(form, 'exercice', 'commencer');
+        NewConversion('exercice');
         document.getElementById('reponse').value = "";
     }
     else {
