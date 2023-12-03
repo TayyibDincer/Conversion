@@ -32,20 +32,20 @@ function nbRandom(unite) {
     trois = 999;
     quatre = 9999;
     cinq = 99999;
-    six = 999999;
-    sept = 9999999;
-    huit = 99999999;
-    neuf = 999999999;
-    dix = 9999999999;
-    onze = 99999999999;
-    douze = 999999999999;
+    six = 99999;
+    sept = 99999;
+    huit = 99999;
+    neuf = 99999;
+    dix = 99999;
+    onze = 99999;
+    douze = 99999;
 
     
     
     switch(unite) {
         case 'ml':
             nc = Number(Math.random()*neuf);
-            nv = Number(Math.floor(Math.random()*4));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 4) {
                 nv = 3;
@@ -53,7 +53,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'cl':
             nc = Number(Math.random()*huit);
-            nv = Number(Math.floor(Math.random()*5));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 5) {
                 nv = 4;
@@ -61,7 +61,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'g':
             nc = Number(Math.random()*neuf);
-            nv = Number(Math.floor(Math.random()*4));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 4) {
                 nv = 3;
@@ -69,7 +69,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'm3':
             nc = Number(Math.random()*trois);
-            nv = Number(Math.floor(Math.random()*10));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 10) {
                 nv = 9;
@@ -77,7 +77,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'dm3':
             nc = Number(Math.random()*six);
-            nv = Number(Math.floor(Math.random()*7));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 7) {
                 nv = 6;
@@ -85,7 +85,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'cm3':
             nc = Number(Math.random()*neuf);
-            nv = Number(Math.floor(Math.random()*4));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 4) {
                 nv = 3;
@@ -98,7 +98,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'kl':
             nc = Number(Math.random()*trois);
-            nv = Number(Math.floor(Math.random()*10));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 10) {
                 nv = 9;
@@ -106,7 +106,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'hl':
             nc = Number(Math.random()*quatre);
-            nv = Number(Math.floor(Math.random()*9));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 9) {
                 nv = 8;
@@ -114,7 +114,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'dal':
             nc = Number(Math.random()*cinq);
-            nv = Number(Math.floor(Math.random()*8));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 8) {
                 nv = 7;
@@ -122,7 +122,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'l':
             nc = Number(Math.random()*six);
-            nv = Number(Math.floor(Math.random()*7));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 7) {
                 nv = 6;
@@ -130,7 +130,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'dl':
             nc = Number(Math.random()*sept);
-            nv = Number(Math.floor(Math.random()*6));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 6) {
                 nv = 5;
@@ -138,7 +138,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 't':
             nc = Number(Math.random()*trois);
-            nv = Number(Math.floor(Math.random()*10));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 10) {
                 nv = 9;
@@ -146,7 +146,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'kg':
             nc = Number(Math.random()*six);
-            nv = Number(Math.floor(Math.random()*7));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 7) {
                 nv = 6;
@@ -154,7 +154,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'hg':
             nc = Number(Math.random()*sept);
-            nv = Number(Math.floor(Math.random()*6));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 6) {
                 nv = 5;
@@ -162,7 +162,7 @@ function nbRandom(unite) {
             return [(nc.toFixed(nv)), nv];
         case 'dag':
             nc = Number(Math.random()*huit);
-            nv = Number(Math.floor(Math.random()*5));
+            nv = Number(Math.floor(Math.random()*3));
             
             if (nv == 5) {
                 nv = 4;
