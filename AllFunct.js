@@ -416,6 +416,7 @@ function VerifRep(form, idtriche, idrep) {
     if (document.forms[form].elements[idrep].value == document.forms[form].elements[idtriche].getAttribute('name')) {
         alert('reussi');
         NewConversion(form, 'exercice', 'commencer');
+        document.getElementById('reponse').value = "";
     }
     else {
         alert('échoué');
