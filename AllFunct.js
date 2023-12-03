@@ -1,29 +1,39 @@
-function Hidee(form, fs, button) {
+function Hidee(form, fs) {
+    tabAide = document.getElementById('tabAide');
     // Cette fonction crée tout d'abord le tableau 'tabAide' dans le div 'divaide', et une et unique fois
     // Ensuite il permet de Montrer et/ou Cacher le tableau 'tabAide' si le bouton _button est pressé (dans notre cas pour l'instant
     // _button = 'aidebutton1' always)
-    if (document.getElementById('tabAide') == null) {
+    if (tabAide == null) {
         TabVideAide1('divaide');
     }
 
-
-
     if (fs == 'autre') {
-        alert('L\'aide n°2 n\'est pas disponible pour le moment.');
+        tr7 = document.getElementById('tr7');
+        if (tr7.getAttribute('class') == 'hide') {
+            tr7.setAttribute('class', '');
+        }
+        else if (tr7.getAttribute('class') != 'hide') {
+            tr7.setAttribute('class', 'hide');
+        }
     }
     else {
+        if (tr7.getAttribute('class') != 'hide') {
+            tr7.setAttribute('class', 'hide');
+        }
+        
         Aide = document.forms[form].elements[fs];
         cl = Aide.classList;
+        if (cl == 'hide') {
+            cl.remove('hide');
+        }
+        else if (cl != 'hide') {
+            cl.add('hide');
+        }
     }
 
 
 
-    if (cl == 'hide' && button == 'aidebutton1') {
-        cl.remove('hide');
-    }
-    else if (cl != 'hide' && button == 'aidebutton1') {
-        cl.add('hide');
-    }
+    
 }
 
 function nbRandom(unite) {
@@ -431,15 +441,15 @@ function VerifRep(form, idtriche, idrep) {
     
     if (sareponse == document.forms[form].elements[idtriche].getAttribute('name')) {
         alert('Réussi');
+        reloadAndSupp();
         NewConversion('exercice');
-        document.getElementById('reponse').value = "";
     }
     else {
         alert('Échoué');
     }
 }
 
-function reloadAndSupp(rep) {
-    document.getElementById(rep).value = "";
+function reloadAndSupp() {
+    document.forms['monForm'].reset();
     document.location.reload();
 }

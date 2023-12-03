@@ -90,7 +90,17 @@ table #tr6 td
     font-size: 1em;
     font-weight: bold;
     width: 6.66%;
+}
 
+table #tr7 td
+{
+    width: 6.66%;
+    text-align: center;
+}
+
+table #tr7 td input
+{
+    width: 75%;
 }
 
 input[name="reponse"] {
@@ -102,6 +112,11 @@ input[name="valider"] {
 }
 
 input[name="aidebutton1"] {
+    position: absolute;
+    left: 1.5%;
+}
+
+input[name="aidebutton2"] {
     position: absolute;
     left: 1.5%;
 }
@@ -126,5 +141,5 @@ fieldset {
 }
 
 fieldset[id="aide"] {
-    padding-bottom: 4%;
+    padding-bottom: 2%;
 }

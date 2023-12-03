@@ -8,6 +8,18 @@ function TdVide() {
     return nTdVide;
 }
 
+var nbInp = 1;
+
+function TdInput() {
+    var TdInput = document.createElement('td');
+    TdInput.setAttribute('id', 'tdinp'+String(nbInp));
+    var Inp = document.createElement('input');
+    Inp.setAttribute('id', 'inp'+String(nbInp));
+    TdInput.appendChild(Inp);
+    nbInp += 1;
+    return TdInput;
+}
+
 function TabVideAide1(div) {
     
     divCor = document.getElementById(div);
@@ -169,8 +181,9 @@ function TabVideAide1(div) {
     var tr4 = null;
     var tr5 = null;
     var tr6 = null;
+    var tr7 = null;
 
-    for(let i=0; i<6; i++) {
+    for(let i=0; i<7; i++) {
         var nTr = document.createElement('tr');
         nTr.setAttribute('id', 'tr'+String(Number(i)+1));
         nTab.appendChild(nTr);
@@ -193,6 +206,8 @@ function TabVideAide1(div) {
             case 5:
                 tr6 = nTr;
                 break;
+            case 6:
+                tr7 = nTr;
         }
     }
     
@@ -259,7 +274,11 @@ function TabVideAide1(div) {
     tr6.appendChild(nTd32);
     tr6.appendChild(nTd33);
     tr6.appendChild(nTd34);
-    
+
+    for (let i = 0; i<12; i++) {
+        tr7.appendChild(TdInput());
+    }
+    tr7.setAttribute('class', 'hide');
 
     divCor.appendChild(nTab);
 }
