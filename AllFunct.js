@@ -1,3 +1,8 @@
+function reloadAndSupp() {
+    document.forms['monForm'].reset();
+    document.location.reload();
+}
+
 function Hidee(form, fs) {
     tabAide = document.getElementById('tabAide');
     // Cette fonction crée tout d'abord le tableau 'tabAide' dans le div 'divaide', et une et unique fois
@@ -447,9 +452,4 @@ function VerifRep(form, idtriche, idrep) {
     else {
         alert('Échoué');
     }
-}
-
-function reloadAndSupp() {
-    document.forms['monForm'].reset();
-    document.location.reload();
 }
