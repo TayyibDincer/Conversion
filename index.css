@@ -7,17 +7,17 @@
 }
 
 
-#monTableau input[type=number] {
+table input[type=number] {
     width: 94%;
     -moz-appearance: textfield;
 }
 
-#monTableau, #monTableau caption
+table, table caption
 {
     margin: auto;
 }
 
-#monTableau
+table
 {
     border: #000000 2px solid;
     border-collapse: collapse;
@@ -25,28 +25,28 @@
     width: 80%;
 }
 
-#monTableau caption
+table caption
 {
     background-color: #DDEEFF;
 	}
 
-#monTableau th
+table th
 {
     color: #503500;
     background-color: #FFCC66;
     border: #000000 1px solid;
-    font-size: 2em;
-    font-weight: lighter;
+    font-size: 1.8em;
+    font-weight: light;
     width: 20%;
 }
 
-#monTableau td
+table td
 {
     border: #000000 1px solid;
     text-align: right;
 }
 
-#monTableau #tr2 td
+table #tr2 td
 {
     text-align: center;
     font-size: 1.7em;
@@ -54,33 +54,71 @@
     width: 20%;
 }
 
-#monTableau #tr3 td
+table #tr3 td
 {
     text-align: center;
     color: #503500;
     background-color: #FFCC66;
     border: #000000 1px solid;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1em;
     width: 6.66%;
 }
 
-#monTableau #tr4 td
+table #tr4 td
 {
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: bold;
     width: 6.66%;
 }
 
-#monTableau #tr5 td
+table #tr5 td
 {
     text-align: center;
+    color: #503500;
+    background-color: #FFCC66;
+    border: #000000 1px solid;
+    font-weight: bold;
+    font-size: 1em;
     width: 6.66%;
 }
 
-#monTableau #tr6 td
+table #tr6 td
 {
     text-align: center;
+    font-size: 1em;
+    font-weight: bold;
     width: 6.66%;
+}
+
+input[name="reponse"] {
+    margin-bottom: 1%;
+}
+
+input[name="valider"] {
+    position: relative;
+}
+
+input[name="aidebutton1"] {
+    position: absolute;
+    left: 1.5%;
+}
+
+legend[name="atoidejouer"] {
+    background-color: #ffcc666c;
+    font-size: 120%;
+}
+
+legend[name="aide"] {
+    background-color: #ffcc666c;
+    font-size: 140%;
+}
+
+fieldset {
+    margin-bottom: 1%;
+}
+
+fieldset[id="aide"] {
+    padding-bottom: 4%;
 }
