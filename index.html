@@ -4,7 +4,7 @@
 		<title>Conversion</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  		<link rel="stylesheet" type="text/css" href="index.css" />
-		 <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="indexInf480.css" />
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)" href="indexInf1000.css" />
 		<script type="text/javascript" src="TabVideAide1.js">
 		</script>
 		<script type="text/javascript" src="test.js">
@@ -13,7 +13,10 @@
 		</script>
 		<script>
 			function myFunction() {
-				alert('Petit conseil :\nMeilleur visionnage en rotation paysage.');
+				if (sessionStorage.getItem('msgalert') != 'montré') {
+					alert('Petit conseil :\nMeilleur visionnage en rotation paysage.');
+					sessionStorage.setItem('msgalert', 'montré');
+				}
 			}
 		</script>
     </head>
